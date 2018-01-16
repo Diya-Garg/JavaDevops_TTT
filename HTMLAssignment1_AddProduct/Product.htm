@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Product</title>
+<link rel="stylesheet" href="css\\websitecss.css"/>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<a href="HomePage.htm"><img src="images\\icon.png" alt="Logo Area" class="logo"/></a>
+			<h3 style="float:right">Welcome Admin</h3>
+		</header>
+		
+		 
+		
+		<section class="section">
+		    <h1>Add Product</h1>
+			<form>
+				<table>
+					<tr>
+						<td>Product Id : </td>
+						<td><input type="text" id="prodid"></td>
+					</tr>
+					<tr>
+						<td>Product Name : </td>
+						<td><input type="text" id="prodname"></td>
+					</tr>
+					<tr>
+						<td>Product Price : </td>
+						<td><input type="text" id="prodprice"></td>
+					</tr>
+					<tr>
+						<td>Product Quantity : </td>
+						<td><input type="text" id="prodquantity"></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Add Product" onclick="addProduct()"></td>
+						<td><input type="reset" type="Reset"></td>
+					</tr>
+				</table>
+			</form>
+		</section>
+		<footer>
+		<p>
+			&copy; copywrite niit.com
+		</p>
+	</footer>
+	</div>
+</body>
+ <script type="text/javascript">
+	function addProduct(){
+		
+		var id=document.getElementById("prodid").value;
+		var name=document.getElementById("prodname").value;
+		var price=document.getElementById("prodprice").value;
+		var quantity=document.getElementById("prodquantity").value;
+		
+		window.location.href="ProductDisplay.html?pid="+id+"&&name="+name+"&&price="+price+"&&quantity="+quantity;
+	}
+</script> 
+</html>

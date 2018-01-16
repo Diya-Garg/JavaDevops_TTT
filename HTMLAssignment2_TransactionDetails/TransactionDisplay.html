@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Product</title>
+</head>
+<script type="text/javascript">
+	function getData(){
+		var locate = window.location;
+		document.joe.burns.value = locate;
+
+		var text = document.joe.burns.value;
+		
+		
+		var customername=getCustomerName(text);
+		var productname=getProductName(text,theleft);
+		var totalprice=getTotalPrice(text,theleft);
+		var priceafterdiscount=getDiscountedPrice(text);
+		
+		/* alert(customername);
+		 alert(productname);
+		alert(totalprice);
+		alert(priceafterdiscount);  */
+		
+		
+		 document.getElementById("pname").innerHTML=productname;
+		document.getElementById("cname").innerHTML=customername;
+		document.getElementById("tprice").innerHTML=totalprice;
+		document.getElementById("pprice").innerHTML=priceafterdiscount; 
+		
+	}
+	function getCustomerName(str)
+	{
+		alert
+		theleft = str.indexOf("=") + 1;
+		theright = str.indexOf("&&");
+	return(str.substring(theleft, theright));
+	}
+	 function getProductName(str,startIndex){
+		alert
+		theleft = str.indexOf("=",startIndex) + 1;  
+		theright = str.indexOf("&&",theleft);
+		return(str.substring(theleft, theright));
+	}
+	function getTotalPrice(str,startIndex){
+		alert
+		theleft = str.indexOf("=",startIndex) + 1;  
+		theright = str.indexOf("&&",theleft);
+		return(str.substring(theleft, theright));
+	}
+	function getDiscountedPrice(str){
+		alert
+		theleft = str.lastIndexOf("=")+1 ;  
+		return(str.substring(theleft,str.length));
+	}
+	 
+</script>
+<body onload="getData()">
+		<FORM NAME="joe">
+			<INPUT TYPE="hidden" NAME="burns">
+		</FORM>
+		
+		    <h1>Transaction Details :-</h1>
+				<table>
+					<tr>
+						<td>Product Name : </td>
+						<td>
+							<div id="pname"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>Customer Name : </td>
+						<td><div id="cname"></div></td>
+					</tr>
+					<tr>
+						<td>Total Price : </td>
+						<td><div id="tprice"></div></td>
+					</tr>
+					<tr>
+						<td>Discounted Price : </td>
+						<td><div id="pprice"></div></td>
+					</tr>
+				</table>
+	 	
+		
+</body>
+</html>

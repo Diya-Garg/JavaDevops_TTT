@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link rel="stylesheet" href="css\\websitecss.css"/>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<img src="images\\icon.png" alt="Logo Area" class="logo"/>
+			<nav class="top_nav">
+				<ul>
+					<li><a href="">Home</a>
+					<li><a href="">Services</a>
+					<li><a href="">Tutorials</a>
+					<li><a href="">About Us</a>
+					<li><a href="">Contact Us</a>
+				</ul>
+			</nav>
+		</header>
+		
+		 
+		
+		<section class="left_side">
+			<article>
+				<header>
+					<h2>Web Desigining</h2>
+					<h3>HTML  & CSS </h3>
+				</header>
+				<p1>HTML stands for Hypertext markup language . It is a mark 
+				up language which is used to create static web pages . It is a 
+				language through which we will specify what we want to display to
+				the user.</p1>
+				<p>
+					CSS stands for Cascading style sheet . It is used to provide styling to 
+					the web pages created using CSS. CSS can be categorized into three types:-
+					<ul>
+						<li>Inline CSS</li>
+						<li>Internal CSS</li>
+						<li>External CSS</li>
+					</ul>
+				</p>
+				
+			</article>
+		</section>
+		
+		<aside class="right_side">
+			<div>
+				<h3 id="error"></h3>
+				<h2 style="text-align: center">Login Page</h2>
+				<form>
+					<table>
+						<tr>
+							<td>User Name : </td>
+							<td>
+							<input type="text" id="uname"/>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Password : </td><td><input type="password" id="upass"/></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align: center"><input type="button" value="LogIn" onclick="validate()"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</aside>
+		
+	</div>
+	
+	<footer>
+		<p>
+			&copy; copywrite niit.com
+		</p>
+	</footer>
+</body>
+<script type="text/javascript">
+	function validate(){
+		 if((document.getElementById("uname").value=="admin")&&(document.getElementById("upass").value=="admin123")){
+			alert("Welcome User");
+			window.location="Product.htm";
+			
+		}
+		 else {
+			 document.getElementById("error").innerHTML="User name or password is incorrect";
+			
+		}  
+	}
+</script>
+</html>

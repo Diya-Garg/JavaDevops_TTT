@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Product</title>
+<link rel="stylesheet" href="css\\websitecss.css"/>
+</head>
+<script type="text/javascript">
+	function getData(){
+		var locate = window.location;
+		document.joe.burns.value = locate;
+
+		var text = document.joe.burns.value;
+		
+		/*alert("Product Id is " +getProductId(text));
+		alert("Product Name is : "+getProductName(text,theleft))
+		alert("Product Price is " +getProductPrice(text,theleft));
+		alert("Product Quantity is : "+getProductQuantity(text,theleft))*/
+		
+		var id=getProductId(text);
+		var name=getProductName(text,theleft);
+		var price=getProductPrice(text,theleft);
+		var quantity=getProductQuantity(text);
+		
+		document.getElementById("pid").innerHTML=id;
+		document.getElementById("pname").innerHTML=name;
+		document.getElementById("pprice").innerHTML=price;
+		document.getElementById("pquantity").innerHTML=quantity;
+		
+	}
+	function getProductId(str)
+	{
+		alert
+		theleft = str.indexOf("=") + 1;
+		theright = str.indexOf("&&");
+	return(str.substring(theleft, theright));
+	}
+	function getProductName(str,startIndex){
+		alert
+		theleft = str.indexOf("=",startIndex) + 1;  
+		theright = str.indexOf("&&",theleft);
+		return(str.substring(theleft, theright));
+	}
+	function getProductPrice(str,startIndex){
+		alert
+		theleft = str.indexOf("=",startIndex) + 1;  
+		theright = str.indexOf("&&",theleft);
+		return(str.substring(theleft, theright));
+	}
+	function getProductQuantity(str){
+		alert
+		theleft = str.lastIndexOf("=")+1 ;  
+		return(str.substring(theleft,str.length));
+	}
+	
+</script>
+<body onload="getData()">
+	<div class="container">
+		<header>
+			<a href="HomePage.htm"><img src="images\\icon.png" alt="Logo Area" class="logo"/></a>
+			<h3 style="float:right">Welcome Admin</h3>
+		</header>
+		
+		 
+		
+		<section class="section">
+		<FORM NAME="joe">
+			<INPUT TYPE="hidden" NAME="burns">
+		</FORM>
+		
+		    <h1>Product Details :-</h1>
+				<table>
+					<tr>
+						<td>Product Id : </td>
+						<td>
+							<div id="pid"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>Product Name : </td>
+						<td><div id="pname"></div></td>
+					</tr>
+					<tr>
+						<td>Product Price : </td>
+						<td><div id="pprice"></div></td>
+					</tr>
+					<tr>
+						<td>Product Quantity : </td>
+						<td><div id="pquantity"></div></td>
+					</tr>
+				</table>
+	 	
+		</section>
+		
+		
+	
+	<footer>
+		<p>
+			&copy; copywrite niit.com
+		</p>
+	</footer>
+	</div>
+</body>
+</html>

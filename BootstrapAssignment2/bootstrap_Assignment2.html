@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+		$("#btn2").click(function(){
+			$("p").toggle();
+		});
+		
+		
+		$("#btn1").click(function(){
+			$("#img1").animate({
+				height:'+=10px',
+				width:'+=10px',
+			});
+			$("#img1").css({ opacity: 0.5 });
+		});
+		
+	});
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width",initial-scale=1">
+<title>Bootstrap Assignment - 2</title>
+</head>
+<body>
+	
+	<div class="container" style="margin-top: 30px">
+  <div class="col-xs-6">
+    <div class="pull-left"><img id="img1" class="img-responsive" alt="logo" src="icon.png" />
+     
+    <button id="btn1" style="margin-top:10px" class="btn btn-primary btn-block" type="button">Button 1</button>
+    </div>
+  </div>
+  
+  <div class="col-xs-6">
+    <div class="pull-right">
+    	<p>
+    		Bootstrap is a sleek, intuitive, and powerful, mobile first front-end framework for 
+    		faster and easier web development. It uses HTML, CSS and Javascript.Bootstrap was
+    		 developed by Mark Otto and Jacob Thornton at Twitter. It was released as an open source 
+    		 product in August 2011 on GitHub.	Bootstrap is a sleek, intuitive, and powerful, mobile first front-end framework for 
+    		faster and easier web development. It uses HTML, CSS and Javascript.Bootstrap was
+    		 developed by Mark Otto and Jacob Thornton at Twitter. It was released as an open source 
+    		 product in August 2011 on GitHub.It uses HTML, CSS and Javascript.Bootstrap was
+    		 developed by Mark Otto and Jacob Thornton at Twitter. It was released as an open source 
+    		 product in August 2011 on GitHub.
+    	
+    	</p>
+    	<button id="btn2" style="margin-top:10px" class="btn btn-primary btn-block" type="button">Button 2</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
