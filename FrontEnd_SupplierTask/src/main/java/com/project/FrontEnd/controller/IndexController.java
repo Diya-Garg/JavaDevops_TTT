@@ -15,7 +15,7 @@ public class IndexController {
 	public ModelAndView sayHello(){
 		
 		//System.out.println("Hello 1");
-		ModelAndView mv=new ModelAndView("welcome");
+		ModelAndView mv=new ModelAndView("AdminAdding");
 		return mv;
 	}
 	

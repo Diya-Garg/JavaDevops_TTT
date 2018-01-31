@@ -8,12 +8,13 @@
 <title>Add Supplier Form</title>
 </head>
 <body>
-	<h1>Add Supplier</h1>
-	<form:form action="updateSupplierDetails" method="post" modelAttribute="supplier">
+	<h1>Update Supplier</h1>
+	<form:form action="updateSupplierDetails" method="post" modelAttribute="newSupplier">
 		<table>
 			<tr>
 				<td>Supplier Id : </td>
 				<td><form:input path="supplierId" disabled="true"/></td>
+				<form:hidden path="supplierId"/>
 			</tr>
 			<tr>
 				<td>Supplier Name : </td>

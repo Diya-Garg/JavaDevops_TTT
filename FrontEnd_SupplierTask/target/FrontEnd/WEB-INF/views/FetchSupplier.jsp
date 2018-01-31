@@ -10,7 +10,7 @@
 <body>
 	<div align="center">
 		<h1>${msg}</h1>
-		<form:form method="get" action="deleteSupplier" modelAttribute="supplier">
+		<form:form method="get" action="${formAction}" modelAttribute="supplier">
 		<table>
 			<tr>
 				<td>Supplier Id : </td>
@@ -19,7 +19,7 @@
 			<tr>
 				<td></td>
 				<td>
-					<input type="submit" value="Delete Supplier"/>
+					<input type="submit" value="${btnLabel}"/>
 				</td>
 			</tr>
 		</table>
