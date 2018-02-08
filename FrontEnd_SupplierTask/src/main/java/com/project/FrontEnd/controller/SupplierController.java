@@ -21,19 +21,12 @@ public class SupplierController {
 	@Autowired
 	private SupplierDao supplierDao;
 	
-	@RequestMapping(value="/add",method=RequestMethod.GET)
-	public ModelAndView getAddSupplierForm(){
-		
-		//System.out.println("Hello 2 ");
-		ModelAndView mv=new ModelAndView("AddSupplier");
-		mv.addObject("supplier",new Supplier());
-		return mv;
-	}
 	
-	@RequestMapping(value="addSupplierDetails",method=RequestMethod.POST)
+	
+	@RequestMapping(value="/admin/addSupplier",method=RequestMethod.POST)
 	public ModelAndView addSupplierProcess(@ModelAttribute("supplier")Supplier supplierObj){
 		
-		ModelAndView mv=new ModelAndView("SupplierStatus");
+		ModelAndView mv=new ModelAndView("Status");
 		
 		boolean result=supplierDao.insertSupp(supplierObj);
 		if(result){
@@ -59,7 +52,7 @@ public class SupplierController {
 	public ModelAndView deleteSupplierProcess(@ModelAttribute("supplier")Supplier supplierObj){
 		int supplierId=supplierObj.getSupplierId();
 		boolean result=supplierDao.deleteSupp(supplierId);
-		ModelAndView mv=new ModelAndView("SupplierStatus");
+		ModelAndView mv=new ModelAndView("Status");
 		
 		if(result){
 		mv.addObject("msg","Supplier Deleted Succesfully...");

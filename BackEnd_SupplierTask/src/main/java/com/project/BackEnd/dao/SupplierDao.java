@@ -1,5 +1,7 @@
 package com.project.BackEnd.dao;
 
+import java.util.List;
+
 import com.project.BackEnd.dto.Supplier;
 
 public interface SupplierDao {
@@ -8,4 +10,5 @@ public interface SupplierDao {
 	boolean updateSupp(Supplier supplier);
 	boolean deleteSupp(int supplierId);
 	public Supplier getSupplierById(int supplierId);
+	public List<Supplier> listSuppliers();
 }

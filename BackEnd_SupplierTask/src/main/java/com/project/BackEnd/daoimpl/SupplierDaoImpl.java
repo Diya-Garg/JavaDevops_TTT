@@ -1,6 +1,10 @@
 package com.project.BackEnd.daoimpl;
 
 
+import java.util.List;
+
+import javax.persistence.TypedQuery;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +12,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.BackEnd.dao.SupplierDao;
+import com.project.BackEnd.dto.Category;
 import com.project.BackEnd.dto.Supplier;
 
 
 @Repository("supplierDao")
-@Transactional//(noRollbackFor=Exception.class)
+@Transactional
 public class SupplierDaoImpl implements SupplierDao {
 
 	@Autowired
@@ -23,6 +28,7 @@ public class SupplierDaoImpl implements SupplierDao {
 	}
 	
 	public boolean insertSupp(Supplier supplier) {
+		System.out.println("I m Here...");
 		try {
 			getSession().persist(supplier);
 			return true;
@@ -63,5 +69,12 @@ public class SupplierDaoImpl implements SupplierDao {
 			return false;
 		}
 	}
+
+	public List<Supplier> listSuppliers() {
+		@SuppressWarnings("unchecked")
+		TypedQuery<Supplier> query=getSession().createQuery("from com.project.BackEnd.dto.Supplier");
+		List<Supplier> list=query.getResultList();
+		System.out.println("List of Suppliers : "+list);
+		return list;	}
 
 }

@@ -1,5 +1,11 @@
-C:\Users\MRuser\Desktop\JavaDevops_Training\MyWorkspace\BackEnd\src\main\java\com\project\BackEnd\config\HibernateConfiguration.java
-C:\Users\MRuser\Desktop\JavaDevops_Training\MyWorkspace\BackEnd\src\main\java\com\project\BackEnd\dto\Supplier.java
-C:\Users\MRuser\Desktop\JavaDevops_Training\MyWorkspace\BackEnd\src\main\java\com\project\BackEnd\App.java
-C:\Users\MRuser\Desktop\JavaDevops_Training\MyWorkspace\BackEnd\src\main\java\com\project\BackEnd\dao\SupplierDao.java
-C:\Users\MRuser\Desktop\JavaDevops_Training\MyWorkspace\BackEnd\src\main\java\com\project\BackEnd\daoimpl\SupplierDaoImpl.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\daoimpl\ProductDaoImpl.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\dao\SupplierDao.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\daoimpl\CategoryDaoImpl.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\dao\CategoryDao.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\dto\Product.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\dto\Supplier.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\dto\Category.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\config\HibernateConfiguration.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\App.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\daoimpl\SupplierDaoImpl.java
+C:\Users\hp\Desktop\DevopsTraining\BackEnd_SupplierTask\src\main\java\com\project\BackEnd\dao\ProductDao.java
